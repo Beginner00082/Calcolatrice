@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #007FFF 0%, #0047AB 100%);
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 320px;
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.2rem;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator {
+    background: rgba(255, 165, 0, 0.6);
+}
+
+.operator:hover {
+    background: rgba(255, 165, 0, 0.8);
+}
+
+.equals {
+    background: rgba(0, 255, 127, 0.6);
+}
+
+.equals:hover {
+    background: rgba(0, 255, 127, 0.8);
+}
+
+.clear, .delete {
+    background: rgba(255, 69, 0.6);
+}
+
+.clear:hover, .delete:hover {
+    background: rgba(255, 69, 0, 0.8);
+}
+
+/* Easter egg animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.easter-egg {
+    animation: shake 0.5s ease-in-out;
+    color: #FFD700 !important;
+    text-shadow: 0 0 10px #FFD700;
+  }
